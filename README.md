@@ -1,70 +1,121 @@
-# Getting Started with Create React App
+Resume Analyzer
+Resume Analyzer is an AI-powered web application that extracts, analyzes, and scores skills from resumes.
+Designed with a modern pastel theme (Sorbet Stem, Petal Glaze, Dusty Orchid, Lilac Grey), it provides recruiters and job seekers with an elegant way to evaluate resumes.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+✨ Features
 
-## Available Scripts
+📂 Upload resumes in PDF/DOCX format
 
-In the project directory, you can run:
+🤖 AI-based skill extraction with NLP (spaCy + Sentence Transformers)
 
-### `npm start`
+📊 Smart scoring system with progress bar visualizations
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+🎨 Beautiful UI inspired by modern event sites
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+📱 Responsive design (works seamlessly on desktop & mobile)
 
-### `npm test`
+⚡ Fast and lightweight (Flask + React + Tailwind)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+🛠️ Tech Stack
 
-### `npm run build`
+Frontend
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+React (with Hooks)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Tailwind CSS (custom pastel theme)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Framer Motion (smooth animations)
 
-### `npm run eject`
+Backend
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Flask (REST API)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+pdfplumber, python-docx (resume parsing)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+spaCy + Sentence Transformers (NLP & embeddings)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+📂 Project Structure
+ResumeAnalyser/
+│── resume/
+│   ├── backend/         # Flask server + NLP logic
+│   │   ├── app.py
+│   │   ├── resume_utils.py
+│   │   └── requirements.txt
+│   │
+│   └── frontend/        # React + Tailwind UI
+│       ├── src/
+│       │   ├── components/
+│       │   │   ├── Navbar.js
+│       │   │   ├── UploadSection.js
+│       │   │   ├── Results.js
+│       │   │   └── Footer.js
+│       │   └── App.js
+│       └── package.json
+│
+└── README.md
 
-## Learn More
+⚡ Getting Started
+1️⃣ Clone the Repository
+git clone https://github.com/your-username/resume-analyzer.git
+cd resume-analyzer
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2️⃣ Backend Setup
+cd resume/backend
+conda create -n resume_env python=3.10 -y
+conda activate resume_env
+pip install -r requirements.txt
+python app.py
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+➡️ Runs at http://localhost:5000
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+3️⃣ Frontend Setup
+cd ../frontend
+npm install
+npm start
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+➡️ Runs at http://localhost:3000
 
-### Making a Progressive Web App
+🎯 Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Launch the frontend in browser
 
-### Advanced Configuration
+Upload a resume (PDF or DOCX)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Backend extracts skills → calculates scores
 
-### Deployment
+View results as progress bars in pastel colors
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+📸 Screenshots
+Upload Page
 
-### `npm run build` fails to minify
+(insert screenshot here)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Results Page
+
+(insert screenshot here)
+
+🌟 Roadmap
+
+ Add Job Description Matching (compare resume to JD)
+
+ Export results as PDF report
+
+ Add multi-language resume support
+
+ Career recommendations powered by AI
+
+🤝 Contributing
+
+Contributions are welcome! 🎉
+
+Fork the repo
+
+Create your feature branch (git checkout -b feature/new-feature)
+
+Commit changes (git commit -m 'Add new feature')
+
+Push to branch (git push origin feature/new-feature)
+
+Open a Pull Request 🚀
