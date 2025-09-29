@@ -56,7 +56,7 @@ ResumeAnalyser/
 
 ⚡ Getting Started
 1️⃣ Clone the Repository
-git clone https://github.com/your-username/resume-analyzer.git
+git clone https://github.com/sumaaiiraa236/resumeanalyzer.git
 cd resume-analyzer
 
 2️⃣ Backend Setup
